@@ -23,12 +23,10 @@ ADD colors /etc/vim/colors
 ADD vimrc.local /etc/vim
 
 #get project files
-WORKDIR /projecti
-RUN git clone https://mbadib_p@bitbucket.org/sigl2017ursi/php.git
+WORKDIR /project
+#RUN git clone https://mbadib_p@bitbucket.org/sigl2017ursi/php.git
 
-#COPY project/ /project
-
-#VOLUME /project
+COPY project/ /project
 
 EXPOSE 8000
 
